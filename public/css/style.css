@@ -24,10 +24,6 @@
    padding-top: 10px;
    padding-left: 0px;
 }
-/* .hotairballoon {
-   transform: translate3d(0px,30px,0px);
-   transition: transform .5s ease-in-out;
-} */
 .hotairballoon {
    position: relative;
    top: 60px;

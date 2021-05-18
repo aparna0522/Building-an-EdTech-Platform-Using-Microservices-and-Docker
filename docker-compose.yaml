@@ -2,8 +2,8 @@ version: "2"
 services:
   login:
     build: 
-      context: ./Registration
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.login
     ports: 
       - "5001:5000"
     depends_on: 
@@ -14,12 +14,10 @@ services:
       - "27017:27017"
   php:
     build: 
-      context: ./WorkingCourseMicroservice
-      dockerfile: Dockerfile 
+      context: .
+      dockerfile: Dockerfile.course
     ports:
       - "5000:80"
-    # links: 
-    #   - login
     depends_on: 
       - mysql
       - login
@@ -47,7 +45,7 @@ services:
       PMA_HOST: mysql
   payment:
     build: 
-      context: ./PaymentMicroservice_eduhub
+      context: ./PaymentService
       dockerfile: Dockerfile
     ports: 
       - "3000:3000"
