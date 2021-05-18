@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 const fetch = require("node-fetch");
 const axios = require('axios');
 
-const static_path = path.join(__dirname,"../public");
+const static_path = path.join(__dirname,"../css");
 const template_path = path.join(__dirname,"../templates/views");
 const partials_path = path.join(__dirname,"../templates/partials");
 
