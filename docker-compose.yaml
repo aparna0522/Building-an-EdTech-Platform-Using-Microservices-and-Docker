@@ -18,6 +18,8 @@ services:
       dockerfile: Dockerfile.course
     ports:
       - "5000:80"
+    # links: 
+    #   - login
     depends_on: 
       - mysql
       - login
