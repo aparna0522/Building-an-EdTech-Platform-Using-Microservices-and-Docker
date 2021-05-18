@@ -1,0 +1,29 @@
+{
+  "name": "registration",
+  "version": "1.0.0",
+  "description": "Registration and Login Microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,hbs,css"
+  },
+  "keywords": [
+    "Microservice",
+    "registration",
+    "login",
+    "jwt"
+  ],
+  "author": "Aparna Naik",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.6",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
+}

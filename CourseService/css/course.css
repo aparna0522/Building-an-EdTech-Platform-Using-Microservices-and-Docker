@@ -1,0 +1,75 @@
+.course-bg {
+  background-color: #e1e1e7;
+  overflow-x: hidden;
+}
+.form-container {
+  background: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px 30px 25px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #000;
+  min-height: 650px;
+}
+hr.style-eight {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr.style-eight:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+.form-content {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.heading-form {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.image-preview {
+  width: auto;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 2px solid #dddddd;
+  font-weight: bold;
+  color: #cccccc;
+}
+.image-preview__img {
+  display: none;
+  width: 100%;
+}
+.side-bar {
+  padding-left: 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.side-bar a:hover,
+.side-bar .active {
+  background-color: #f2f2f2 !important;
+}
+#lecturesave:disabled {
+  background: grey;
+}
+#lecturesave {
+  background: #ffbb33;
+}
+
+/******************************* Extra small Devices (Ex. iPhone4) **********************/
+@media (max-width: 767px) {
+  .form-container {
+    margin-top: 15px;
+  }
+}

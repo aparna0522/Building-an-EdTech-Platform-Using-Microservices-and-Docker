@@ -1,0 +1,526 @@
+body {
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  /*position: relative;*/
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/******************** Header ************************/
+.navbar {
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar-brand img {
+  margin-right: 12px;
+  margin-left: 10px;
+}
+.navbar-brand {
+  /* Brand name */
+  font-family: "Yesteryear", cursive;
+  color: #000;
+  font-size: 2.5em;
+  margin-right: 20px;
+}
+
+.btn-outline-warning {
+  color: #000;
+}
+.navbar-nav .nav-link {
+  margin: 10px;
+  font-size: 1.07em;
+  text-align: center;
+}
+.navbar-nav .nav-link .fas {
+  margin-right: 5px;
+}
+nav .navbar-nav li a {
+  color: #000 !important;
+}
+.navbar-light .navbar-nav .nav-item a:hover,
+.navbar-light .navbar-nav .nav-item a:focus {
+  background-color: #f2f2f2 !important;
+}
+
+/******************** End Header **********************/
+
+/* Background image */
+.jumbotron {
+  background: url("../images/banner1200px.jpg") no-repeat;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+div.banner-box {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  top: 230px;
+  right: 80px;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+div.banner-box h1 {
+  font-weight: 550;
+}
+div.banner-box p {
+  margin-top: 20px;
+}
+
+div.banner-box a {
+  color: black;
+  margin-top: 10px;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px #000;
+}
+
+/***********  Video  ********/
+#scrolltext {
+  font-size: 25px;
+  text-align: center;
+}
+
+/********* Courses *****************/
+
+.courses-card .card-box {
+  width: 100%;
+  height: 384px;
+  border: none;
+  margin-top: 30px;
+}
+.courses-card .card-box:hover {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+.courses-card .card-box img {
+  height: 200px;
+}
+.courses-card a {
+  text-decoration: none;
+  color: #000;
+}
+.courses-card .card-title {
+  margin: 0;
+}
+
+.categories hr {
+  margin-bottom: 30px;
+}
+.categories-card .category-box {
+  width: 100%;
+  height: 384px;
+  border: none;
+}
+.categories-card .category-box:hover {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+.categories-card a {
+  text-decoration: none;
+  color: #000;
+}
+.categories-card .category-box img {
+  height: 300px;
+}
+/**************** Strip  **********************/
+
+.parallex {
+  background: url("https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=667&q=80")
+    no-repeat fixed 100%;
+  background-size: cover;
+}
+.parallex-inner {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.parallex .parallex-inner h1 {
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+.parallex .image-sec .card-strip {
+  width: 290px;
+  height: 320px;
+  background-color: #ffbb33;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+.parallex .image-sec .card-strip:hover {
+  height: 368px;
+}
+.parallex .image-sec .card-strip .imgBx {
+  position: relative;
+  width: 260px;
+  height: 364px;
+  top: -41px;
+  left: 0px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.parallex .image-sec .card-strip .imgBx img {
+  border-radius: 4px;
+}
+
+/**************** Testimonials ************/
+
+.container .testimonial {
+  font-size: 3em;
+  text-align: center;
+  margin: 30px 0px 30px 0px;
+}
+.card .sliderText {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.card .content .pname {
+  text-align: center;
+}
+/* hr.slide1 {
+  border-top: 3px solid #ff4444;
+  width: 50%;
+} */
+hr.slide2 {
+  border-top: 3px solid #ffbb33;
+  width: 50%;
+}
+/* hr.slide3 {
+  border-top: 3px solid #007e33;
+  width: 50%;
+} */
+/* hr.slide4 {
+  border-top: 3px solid #33b5e5;
+  width: 50%;
+}
+hr.slide5 {
+  border-top: 3px solid #cc0000;
+  width: 50%;
+} */
+.swiper-slide {
+  width: 400px;
+}
+.swiper-slide:nth-child(1) .sliderText {
+  background: url("https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")
+    no-repeat;
+  background-size: cover;
+}
+.swiper-slide:nth-child(2) .sliderText {
+  background: url("https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")
+    no-repeat;
+  background-size: cover;
+}
+.swiper-slide:nth-child(3) .sliderText {
+  background: url("https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8cGVyc29ufGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=600")
+    no-repeat;
+  background-size: cover;
+}
+.swiper-slide:nth-child(4) .sliderText {
+  background: url("https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlcnNvbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")
+    no-repeat;
+  background-size: cover;
+}
+.swiper-slide:nth-child(5) .sliderText {
+  background: url("https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8&auto=format&fit=crop&w=500&q=60")
+    no-repeat;
+  background-size: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007e33;
+}
+
+/****************************** footer **************************/
+.panel-footer {
+  /*margin-top: 100px;*/
+  margin-bottom: 20px;
+  padding: 50px;
+  background-color: #f2f2f2;
+  line-height: 1.6;
+  width: auto;
+  height: auto;
+  border-top: 1px solid #8c8c8c;
+  box-shadow: 0px 3px 3px 3px #8c8c8c;
+}
+#colleft a,
+#colcenter a,
+#colright a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1em;
+}
+.bottom-line {
+  border-top: 1px solid #d2d2d2;
+  margin-top: 90px;
+}
+
+.social-media ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+.social-media ul li .fa {
+  line-height: 60px;
+  transition: 0.6s;
+}
+
+.social-media ul li a:hover {
+  transform: translate(0, -10px);
+}
+/**End of Footer**/
+/****************************** Large Devices Only ******************************/
+@media (min-width: 1200px) {
+  /* Background image */
+
+  /**HEADER**/
+
+  input.form-control.mr-sm-2 {
+    width: 325px;
+    margin-left: 35px;
+  }
+  .navbar .navbar-nav .nav-item .signup {
+    margin-right: 30px;
+  }
+  /*Testimonials*/
+  .card {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    margin: 0px auto;
+    background: #fff;
+  }
+  .card .content {
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  /* FOOTER*/
+  div.copyright {
+    padding-top: 10px;
+  }
+  .social-media ul {
+    position: absolute;
+    right: 0%;
+    padding-top: 60px;
+    display: flex;
+    transform: translate(-10%, -50%);
+  }
+  .social-media ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    padding: 20%;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/******************************* Medium Devices Only (iPad Pro)*****************************/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header*/
+  input.form-control.mr-sm-2 {
+    margin-left: 7px;
+    width: 250px;
+  }
+
+  .navbar .navbar-nav .nav-item .signup {
+    margin-right: 5px;
+  }
+  .navbar-nav .nav-link {
+    margin: 5px;
+    font-size: 1.07em;
+    text-align: center;
+  }
+  /*Testimonials*/
+  .card {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    margin: 0px auto;
+    background: #fff;
+  }
+  .card .content {
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  /* FOOTER*/
+  div.copyright {
+    padding-top: 10px;
+  }
+  .social-media ul {
+    position: absolute;
+    right: 0%;
+    padding-top: 60px;
+    display: flex;
+    transform: translate(-10%, -50%);
+  }
+  .social-media ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    padding: 20%;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+/******************************* Small Devices Only (iPad, Tablets) ********************************/
+@media (min-width: 768px) and (max-width: 991px) {
+  /** Header  **/
+  input.form-control.mr-sm-2 {
+    margin-left: 200px;
+    width: 45%;
+  }
+
+  /*Banner page*/
+  .jumbotron {
+    background: url("../images/banner950px.jpg") no-repeat;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  div.banner-box {
+    position: absolute;
+    right: 15px;
+    width: 375px;
+    height: 310px;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+  }
+  div.banner-box p {
+    margin-top: 25px;
+  }
+  /******* Strip *******/
+
+  /*Testimonials*/
+  .card {
+    position: relative;
+    width: 375px;
+    height: 550px;
+    margin: 0px auto;
+    background: #fff;
+  }
+  .card .content {
+    width: 375px;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* FOOTER*/
+  div.copyright {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .social-media ul {
+    position: absolute;
+    right: 0%;
+    padding-top: 40px;
+    display: flex;
+    transform: translate(-10%, -50%);
+  }
+  .social-media ul li a {
+    position: relative;
+    /*display: block;*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    padding: 20%;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+/******************************* Extra small Devices (Ex. iPhone4) **********************/
+@media (max-width: 767px) {
+  /*** Header ****/
+  .form-control.mr-sm-2 {
+    margin-left: 6%;
+    width: 73%;
+  }
+  /*Banner page*/
+  .jumbotron {
+    background: url("../images/banner767px.jpg") no-repeat;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  /*Testimonials*/
+  .card {
+    position: relative;
+    width: 325px;
+    height: 550px;
+    margin: 0px auto;
+    background: #fff;
+  }
+  .card .content {
+    width: 325px;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .container .testimonial {
+    font-size: 2.25em;
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+  }
+  /* FOOTER*/
+
+  div.copyright {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .social-media ul {
+    position: absolute;
+    padding-top: 30px;
+    display: flex;
+    transform: translate(-10%, -50%);
+  }
+  .social-media ul li a {
+    position: relative;
+    /*display: block;*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    padding: 20%;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  }
+}

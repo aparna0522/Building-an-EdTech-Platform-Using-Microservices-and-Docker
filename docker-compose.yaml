@@ -1,0 +1,53 @@
+version: "2"
+services:
+  login:
+    build: 
+      context: ./Registration
+      dockerfile: Dockerfile
+    ports: 
+      - "5001:5000"
+    depends_on: 
+      - mongo 
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  php:
+    build: 
+      context: ./WorkingCourseMicroservice
+      dockerfile: Dockerfile 
+    ports:
+      - "5000:80"
+    # links: 
+    #   - login
+    depends_on: 
+      - mysql
+      - login
+  mysql:
+    image: mysql:latest
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: eduhub_course
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+    ports: 
+      - "30003:1000"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    links: 
+      - mysql:mysql
+    ports:
+      - "30002:80"
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: mysql
+  payment:
+    build: 
+      context: ./PaymentMicroservice_eduhub
+      dockerfile: Dockerfile
+    ports: 
+      - "3000:3000"

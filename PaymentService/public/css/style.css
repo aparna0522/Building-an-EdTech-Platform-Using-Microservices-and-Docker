@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+body{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper{
+  position: absolute;
+  top: 43%;
+  left: 55%;
+  transform: translate(-50%,-50%);
+  width: 900px;
+  height: 500px;
+  padding-bottom: 10px;
+  
+}
+
+.checkout_wrapper{
+  box-shadow: 10px 10px 10px 10px grey;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  background-color: #f2de0d;
+}
+
+.checkout_wrapper .product_info{
+  width: 45%;
+  background: linear-gradient(to right top, #f0ad4e, #f4b843, #f6c436, #f6d126, #f2de0d);
+  position: relative;
+}
+
+.checkout_wrapper .product_info img{
+  width: 240px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  margin-top:170px;
+  margin-bottom: 140px;
+  margin-left:60px;
+  margin-right: 100px;
+}
+
+.checkout_wrapper .checkout_form{
+  width: 50%;
+  background: #fff;
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.checkout_wrapper .product_info .content{
+  text-align: center;
+  margin-top: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.checkout_wrapper .product_info .content h3{
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 3px;
+}
+
+.checkout_wrapper .product_info .content p{
+  margin-top: 10px;
+  font-size:14px;
+}
+
+.checkout_form p{
+  margin-bottom: 5px;
+  font-size: 35px;
+  
+}
+
+.checkout_form .details .section{
+  margin-bottom: 5px;
+}
+
+.checkout_form .details .section input[type="text"]{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #dddddd;
+}
+
+.checkout_form .details .section input[type="text"]:focus{
+  border: 2px solid  #242322;
+}
+
+.checkout_form .details .section.last_section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout_form .details .section.last_section .item{
+  width: 48%;
+}
+
+.space{
+  margin-top: 700px;
+}
+.checkout_form .details .btn{
+  background:  #d2d2d2;
+  padding: 5px;
+  
+  text-align: center;
+  margin-top: 25px;
+}
+
+.checkout_form .details .btn a{
+  color:    #000000;
+  letter-spacing: 0px;
+  display: block;
+}
