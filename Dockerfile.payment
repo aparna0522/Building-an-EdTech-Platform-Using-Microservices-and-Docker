@@ -9,4 +9,4 @@ COPY . .
 #Expose port and start application
 EXPOSE 3000
 ENV TZ Asia/Colombo
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "payment" ]

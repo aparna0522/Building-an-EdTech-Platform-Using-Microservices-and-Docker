@@ -47,7 +47,7 @@ services:
       PMA_HOST: mysql
   payment:
     build: 
-      context: ./PaymentService
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.payment
     ports: 
       - "3000:3000"

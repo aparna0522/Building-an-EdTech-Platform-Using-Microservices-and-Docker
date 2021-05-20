@@ -1,17 +1,19 @@
 {
   "name": "registration",
   "version": "1.0.0",
-  "description": "Registration and Login Microservice",
+  "description": "Login + Payment Microservice",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,hbs,css"
+    "dev": "nodemon src/app.js -e js,hbs,css",
+    "payment": "nodemon app.js -e ejs"
   },
   "keywords": [
     "Microservice",
     "registration",
     "login",
-    "jwt"
+    "payment",
+    "razorpay"
   ],
   "author": "Aparna Naik",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^9.0.2",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "jsonwebtoken": "^8.5.1",

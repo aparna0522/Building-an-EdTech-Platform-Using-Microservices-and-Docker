@@ -34,11 +34,11 @@
 						<div class="collapse navbar-collapse" id="navbarNav">
 							<ul class="navbar-nav ml-auto">	
 								<li class="nav-item">
-									<a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?> ">Back to Student</a>
+									<a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?> ">Dashboard</a>
 								</li>
-								<li class="nav-item">
+								<!-- <li class="nav-item">
 									<h6 class="nav-link text-dark" style="font-size: 1.25em;">USERNAME</h6>
-								</li>
+								</li> -->
 							</ul>
 						</div>	
 				</nav>
