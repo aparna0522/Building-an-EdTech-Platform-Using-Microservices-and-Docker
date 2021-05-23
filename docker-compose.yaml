@@ -54,7 +54,7 @@ services:
       - "7000:7000"
   todo:
     build: 
-      context: ./TODO
+      context: ./TodoService
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
