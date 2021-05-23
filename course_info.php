@@ -45,7 +45,7 @@
                             if(isset($_SESSION['userid']))
                             {   
                                 if($uid!=$_SESSION['userid'])
-                                    echo '<a href="http://localhost:3000/payment/{{x.course_id}}/'.$_SESSION['userid'].'" class="btn btn-light text-dark">Enroll</a>';
+                                    echo '<a href="http://localhost:7000/payment/{{x.course_id}}/'.$_SESSION['userid'].'" class="btn btn-light text-dark">Enroll</a>';
                                 else
                                     echo '<a href="viewcourse.php?id={{x.course_id}}" class="btn btn-light text-dark">Go to course</a>';
                             }    

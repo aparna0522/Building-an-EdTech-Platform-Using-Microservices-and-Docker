@@ -23,6 +23,7 @@ services:
     depends_on: 
       - mysql
       - login
+      - todo
   mysql:
     image: mysql:latest
     command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
@@ -50,4 +51,10 @@ services:
       context: .
       dockerfile: Dockerfile.payment
     ports: 
+      - "7000:7000"
+  todo:
+    build: 
+      context: ./TODO
+      dockerfile: Dockerfile
+    ports:
       - "3000:3000"

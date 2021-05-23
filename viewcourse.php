@@ -57,7 +57,7 @@
                             <a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Back to Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <h6 class="nav-link text-dark" style="font-size: 1.25em;">USERNAME</h6>
+                            <a class="nav-link btn btn-outline-warning" href="http://localhost:3000">My Todo List</a>
                         </li>
                     </ul>
                 </div>	

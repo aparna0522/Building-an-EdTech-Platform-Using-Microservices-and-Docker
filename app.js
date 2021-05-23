@@ -57,6 +57,6 @@ app.post("/api/payment/verify", (req, res) => {
     res.send(response);
 });
 
-app.listen("3000", () => {
+app.listen("7000", () => {
   console.log("server started");
 });
