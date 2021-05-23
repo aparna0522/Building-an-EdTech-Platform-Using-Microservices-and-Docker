@@ -11,6 +11,7 @@
   text-align: center;
   margin-top: 15px;
 }
+
 .bfd-dropfield-inner:hover,
 .bfd-dropfield-inner.bfd-dragover {
   border-color: #bbb;
