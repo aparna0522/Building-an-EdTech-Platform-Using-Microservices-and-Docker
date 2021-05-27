@@ -54,10 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">	
                         <li class="nav-item">
-                            <a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Back to Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-warning" href="http://localhost:3000">My Todo List</a>
+                            <a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Dashboard</a>
                         </li>
                     </ul>
                 </div>	
