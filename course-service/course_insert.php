@@ -7,6 +7,7 @@ $find_course_id = array();
 $course_data_arr= (array)$course_data;
 if(count($course_data_arr)>0)
 {
+    $teacher_id =mysqli_real_escape_string($connect,$course_data->teacher_id);
     $coursetitle =mysqli_real_escape_string($connect,$course_data->coursetitle);
     $coursesubtitle=  mysqli_real_escape_string($connect,$course_data->coursesubtitle);
     $coursedescription = mysqli_real_escape_string($connect,$course_data->coursedescription); 
@@ -15,7 +16,7 @@ if(count($course_data_arr)>0)
     $category = mysqli_real_escape_string($connect,$course_data->category);
     $img_url = $course_data->course_image;
     $amount= floatval( $course_data->amount);
-    $query="INSERT INTO course(coursetitle,coursesubtitle,coursedescription,course_language,course_level,category,course_image,amount)VALUES('".$coursetitle."','".$coursesubtitle."','".$coursedescription."','$language','$level','$category','".$img_url."','$amount')";
+    $query="INSERT INTO course(teacher_id,coursetitle,coursesubtitle,coursedescription,course_language,course_level,category,course_image,amount)VALUES('".$teacher_id."','".$coursetitle."','".$coursesubtitle."','".$coursedescription."','$language','$level','$category','".$img_url."','$amount')";
   
     if(mysqli_query($connect,$query))
     {

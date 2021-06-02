@@ -135,7 +135,7 @@
 								  		<div class="card-body p-2" ng-clock>
 										<p class="card-title mt-3 h5">{{x.coursetitle}}</p>
 										<p class="font-weight-normal mb-1 mt-2"><span class="badge badge-warning">{{x.course_level}}</span></p>
-										<p class="text-muted font-weight-normal mb-1">Kaliash Kher</p>
+	
 										<p><span>&#8377; {{x.amount}}</span></p>
 								  	</div>
 								</div>

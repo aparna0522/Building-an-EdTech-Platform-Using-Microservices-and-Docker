@@ -2,6 +2,7 @@
 	session_start();
 	include('header.html');
 	if(isset($_SESSION['userid'])) {
+		
 ?>	
 	<body ng-app="myApp" ng-controller="myCtrl">	
 		<!-- Navbar -->

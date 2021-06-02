@@ -14,7 +14,7 @@
     border-radius: .3rem;
 }
 </style>
-
+<?php echo"<script>localStorage.setItem('userid','".$_SESSION['userid']."' );</script>";?>
 <body>
   <!--Nav Bar -->
 <header>
@@ -82,6 +82,10 @@
               <a class="nav-link" href="course.php"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>
             </li>
               
+            <li class="nav-item">
+              <a class="nav-link" href="course-edit-delete.php"> Edit course</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link btn btn-outline-warning" href="logout.php">Logout</a>
             </li>      

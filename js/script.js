@@ -147,7 +147,7 @@ app.controller("myCtrl",function($scope,$http){
 		{
 			$scope.coursesubtitle="";
 		}
-		if(!$scope.coursetitle || !$scope.language || !$scope.level || !$scope.category||!img_url || !$scope.amount )
+		if(!$scope.coursetitle || !$scope.language || !$scope.level || !$scope.category||!img_url || !$scope.amount)
 		{
 			$scope.alertcourseMsg = true;
 			$scope.alertcourseClass = 'alert-danger';
@@ -159,6 +159,7 @@ app.controller("myCtrl",function($scope,$http){
 			method: 'POST',
 			url: 'course-service/course_insert.php',
 			data: {
+					'teacher_id':localStorage.getItem('userid'),
 					'coursetitle': $scope.coursetitle,
 					'coursesubtitle': $scope.coursesubtitle,
 					'coursedescription': $scope.coursedescription,

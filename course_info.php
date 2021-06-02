@@ -39,7 +39,7 @@
                             <h1 class="py-2 font-weight-bold" ng-cloak>{{x.coursetitle}}</h1>
                             <p class="font-italic h4" ng-cloak>{{x.coursesubtitle}}</p>
                             <p  class="lead text-dark" ng-cloak><span class="badge badge-pill badge-light">{{x.course_level}}</span></p>
-                            <p class="lead"><i>Charles Russell Severance</i></p>
+                           
                     
                             <?php 
                             if(isset($_SESSION['userid']))
