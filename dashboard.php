@@ -107,7 +107,7 @@
                     <div class="col-sm-6">
                       <h4 class="card-title">'.$rows['coursetitle'].'</h4>
                       <p class="card-text">'.$rows['course_level'].'</p>
-                      <p class="card-text badge badge-pill badge-warning">'.$rows['category'].'</p>
+                      <p class="card-text badge badge-pill badge-warning">'.$rows['category'].'</p><br>
                      
                       <a href="viewcourse.php?id='.$rows['course_id'].'" class="btn btn-warning stretched-link">Continue</a>
                     </div>
