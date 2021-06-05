@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: May 15, 2021 at 02:32 PM
+-- Generation Time: Jun 02, 2021 at 08:00 AM
 -- Server version: 8.0.25
 -- PHP Version: 7.4.16
 
@@ -55,6 +55,7 @@ INSERT INTO `comments` (`comment_id`, `username`, `course_id`, `comment`, `creat
 
 CREATE TABLE `course` (
   `course_id` int NOT NULL,
+  `teacher_id` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `coursetitle` text NOT NULL,
   `coursesubtitle` text,
   `coursedescription` text,
@@ -69,11 +70,11 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`course_id`, `coursetitle`, `coursesubtitle`, `coursedescription`, `course_language`, `course_level`, `category`, `course_image`, `amount`) VALUES
-(17, 'Introduction to Web Development', 'Design your own website', 'This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have. The web is a very big place, and if you are the typical internet user, you probably visit several websites every day, whether for business, entertainment or education. But have you ever wondered how these websites actually work? How are they built? How do browsers, computers, and mobile devices interact with the web? What skills are necessary to build a website? With almost 1 billion websites now on the internet, the answers to these questions could be your first step toward a better understanding of the internet and developing a new set of internet skills.  \n\nBy the end of this course you’ll be able to describe the structure and functionality of the world wide web, create dynamic web pages using a combination of HTML, CSS, and JavaScript, apply essential programming language concepts when creating HTML forms, select an appropriate web hosting service, and publish your webpages for the world to see. Finally, you’ll be able to develop a working model for creating your own personal or business websites in the future and be fully prepared to take the next step in a more advanced web development or design course or specialization.', 'English(UK)', 'Beginner level', 'IT&Software', 'http://res.cloudinary.com/eduhub/image/upload/v1611839536/course_image_videos/tqa7sr70lbgzk5dexbt7.jpg', 2000),
-(18, 'Digital Marketing Specialization', 'Drive Customer Behavior Online. A six-course overview of the latest digital marketing skills, taught by industry experts.', 'Master strategic marketing concepts and tools to address brand communication in a digital world.\nThis Specialization explores several aspects of the new digital marketing environment, including topics such as digital marketing analytics, search engine optimization, social media marketing, and 3D Printing. When you complete the Digital Marketing Specialization you will have a richer understanding of the foundations of the new digital marketing landscape and acquire a new set of stories, concepts, and tools to help you digitally create, distribute, promote and price products and services.', 'English(UK)', 'Intermediate level', 'Marketing', 'http://res.cloudinary.com/eduhub/image/upload/v1612088174/course_image_videos/ferdlgq7mruqmfoetjbp.png', 1100),
-(40, 'R Programming', '', 'In this course, you will learn how to program in R and how to use R for effective data analysis. You will learn how to install and configure software necessary for a statistical programming environment and describe generic programming language concepts as they are implemented in a high-level statistical language. The course covers practical issues in statistical computing which includes programming in R, reading data into R, accessing R packages, writing R functions, debugging, profiling R code, and organizing and commenting R code. Topics in statistical data analysis will provide working examples.', 'English(UK)', 'Beginner level', 'IT&Software', 'https://res.cloudinary.com/eduhub/image/upload/v1614600052/course_image_videos/bqwc8wwvalcgicfliaka.png', 1200),
-(50, 'Brand Management: Aligning Business, Brand and Behaviour', '', 'The course offers a brand workout for your own brands, as well as guest videos from leading branding professionals. \n\nThe aim of the course is to change the conception of brands as being an organisation\'s visual identity (e.g., logo) and image (customers\' brand associations) to an experience along \"moments-that-matter\" along the customer journey and, therefore, delivered by people across the entire organisation. Brands are thus not only an external promise to customers, but a means of executing business strategy via internal brand-led behaviour and culture change.', 'English(UK)', 'Beginner level', 'Business', 'http://res.cloudinary.com/eduhub/image/upload/v1618671410/course_image_videos/yuf96pjqka7zd15lfquq.jpg', 900);
+INSERT INTO `course` (`course_id`, `teacher_id`, `coursetitle`, `coursesubtitle`, `coursedescription`, `course_language`, `course_level`, `category`, `course_image`, `amount`) VALUES
+(17, '60b5e955b1819600256b70e4', 'Introduction to Web Development', 'Design your own website', 'This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have. The web is a very big place, and if you are the typical internet user, you probably visit several websites every day, whether for business, entertainment or education. But have you ever wondered how these websites actually work? How are they built? How do browsers, computers, and mobile devices interact with the web? What skills are necessary to build a website? With almost 1 billion websites now on the internet, the answers to these questions could be your first step toward a better understanding of the internet and developing a new set of internet skills.  \n\nBy the end of this course you’ll be able to describe the structure and functionality of the world wide web, create dynamic web pages using a combination of HTML, CSS, and JavaScript, apply essential programming language concepts when creating HTML forms, select an appropriate web hosting service, and publish your webpages for the world to see. Finally, you’ll be able to develop a working model for creating your own personal or business websites in the future and be fully prepared to take the next step in a more advanced web development or design course or specialization.', 'English(UK)', 'Beginner level', 'IT&Software', 'http://res.cloudinary.com/eduhub/image/upload/v1611839536/course_image_videos/tqa7sr70lbgzk5dexbt7.jpg', 2000),
+(18, '60b5e955b1819600256b70e4', 'Digital Marketing Specialization', 'Drive Customer Behavior Online. A six-course overview of the latest digital marketing skills, taught by industry experts.', 'Master strategic marketing concepts and tools to address brand communication in a digital world.\nThis Specialization explores several aspects of the new digital marketing environment, including topics such as digital marketing analytics, search engine optimization, social media marketing, and 3D Printing. When you complete the Digital Marketing Specialization you will have a richer understanding of the foundations of the new digital marketing landscape and acquire a new set of stories, concepts, and tools to help you digitally create, distribute, promote and price products and services.', 'English(UK)', 'Intermediate level', 'Marketing', 'http://res.cloudinary.com/eduhub/image/upload/v1612088174/course_image_videos/ferdlgq7mruqmfoetjbp.png', 1100),
+(40, '60b5e955b1819600256b70e4', 'R Programming', '', 'In this course, you will learn how to program in R and how to use R for effective data analysis. You will learn how to install and configure software necessary for a statistical programming environment and describe generic programming language concepts as they are implemented in a high-level statistical language. The course covers practical issues in statistical computing which includes programming in R, reading data into R, accessing R packages, writing R functions, debugging, profiling R code, and organizing and commenting R code. Topics in statistical data analysis will provide working examples.', 'English(UK)', 'Beginner level', 'IT&Software', 'https://res.cloudinary.com/eduhub/image/upload/v1614600052/course_image_videos/bqwc8wwvalcgicfliaka.png', 1200),
+(50, '60b5e955b1819600256b70e4', 'Brand Management: Aligning Business, Brand and Behaviour', '', 'The course offers a brand workout for your own brands, as well as guest videos from leading branding professionals. \n\nThe aim of the course is to change the conception of brands as being an organisation\'s visual identity (e.g., logo) and image (customers\' brand associations) to an experience along \"moments-that-matter\" along the customer journey and, therefore, delivered by people across the entire organisation. Brands are thus not only an external promise to customers, but a means of executing business strategy via internal brand-led behaviour and culture change.', 'English(UK)', 'Beginner level', 'Business', 'http://res.cloudinary.com/eduhub/image/upload/v1618671410/course_image_videos/yuf96pjqka7zd15lfquq.jpg', 900);
 
 -- --------------------------------------------------------
 
@@ -129,7 +130,8 @@ INSERT INTO `enrollment` (`enrollment_id`, `user_id`, `course_id`, `username`) V
 (5, '609eb73869e44c0020116163', 18, 'janhavi'),
 (6, '609eb73869e44c0020116163', 50, 'Abc'),
 (7, '609fd6a63941170024b42729', 40, 'Abc'),
-(8, '609fd6a63941170024b42729', 17, 'Abc');
+(8, '609fd6a63941170024b42729', 17, 'Abc'),
+(9, '60b72697442504001f8952f7', 18, 'Abc');
 
 -- --------------------------------------------------------
 
@@ -324,7 +326,7 @@ ALTER TABLE `documents`
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `enrollment_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `enrollment_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `lecture`

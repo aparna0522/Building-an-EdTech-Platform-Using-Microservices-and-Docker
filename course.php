@@ -1,8 +1,7 @@
 <?php 
 	session_start();
+	if(isset($_SESSION['userid'])){
 	include('header.html');
-	if(isset($_SESSION['userid'])) {
-		
 ?>	
 	<body ng-app="myApp" ng-controller="myCtrl">	
 		<!-- Navbar -->
@@ -412,11 +411,12 @@
         			$('#staticBackdrop').modal('show');
     			});
 			</script>	
-	<?php 	
-		}
-		else {
-			echo '<script> window.onload("http://localhost:5001/login") </script>';
-		} 
-	?>
 	</body>
 </html>
+<?php
+}
+else{
+    header("Location:http://localhost:5001/login");
+}
+
+?>

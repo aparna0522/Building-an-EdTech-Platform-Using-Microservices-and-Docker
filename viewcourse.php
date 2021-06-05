@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    if($_SESSION['userid']){
     $userid =  strval($_SESSION['userid']);
     $course_id=$_GET['id'];
     include('header.html');
@@ -342,3 +343,10 @@
             </script>   
 </body>
 </html>    
+<?php
+}
+else{
+    header("Location:http://localhost:5001/login");
+}
+
+?>
