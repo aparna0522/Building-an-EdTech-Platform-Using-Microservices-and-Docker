@@ -1,59 +1,99 @@
 <?php 
+	session_start();
 	include('header.html');
 	$con = mysqli_connect('mysql','root','root');
 	mysqli_select_db($con,'eduhub_course');
+	
 ?>
 <body >
-    <header>
-		<nav class="navbar navbar-expand-lg navbar-light">
-			<a class="navbar-brand" href="index.php">
-				<img 
-        			src="images/favicon.jpeg"
-					width="75"
-            		height="75"
-					alt="EduHub.png"
-				/>EduHub
-				</a>
-                <button
-					id="navbarToggle"
-					class="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-					>
-					<span class="navbar-toggler-icon"></span>
-				</button>
+<nav class="navbar navbar-expand-lg navbar-light">
+				
+				<a class="navbar-brand" href="index.php">
+					<img 
+						src="images/favicon.jpeg"
+						width="75"
+						height="75"
+						alt="EduHub.png"
+					/>EduHub
+					</a>
 
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="navbarDropdownMenuLink"
-								data-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
-							>
-							Categories
-							</a>
+					<button
+						id="navbarToggle"
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+						>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<form class="form-inline" action="searchresults.php" method="POST">
+							<input
+								class="form-control mr-sm-2"
+								type="text"
+								name="str"
+								placeholder="What do you want to learn?"
+								
+								
+							/>
+							
+							<button class="btn btn-outline-warning my-2 my-sm-0" type="submit" name="submit-search">
+								<i class="fas fa-search"></i>
+							</button>
+						</form>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdownMenuLink"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Categories
+								</a>
 								<div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
 									<a class="dropdown-item" href="categorycourse.php?category=Arts">Arts</a>
 									<a class="dropdown-item" href="categorycourse.php?category=Business">Business</a>
 									<a class="dropdown-item" href="categorycourse.php?category=Marketing">Marketing</a>
 									<a class="dropdown-item" href="categorycourse.php?category=IT-Software">IT &amp; Software</a>
-
+									
 								</div>
-						</li>
-					</ul>
-				</div>
-		</nav>
-	</header>
-	<div class="course__category mt-5 mb-5" >
-        <div class="container">    
+							</li>
+							<li class="nav-item">
+								<?php 
+								if(isset($_SESSION['userid']))
+									echo '<a class="nav-link" href="course.php"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+								else 
+									echo '<a class="nav-link" href="http://localhost:5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+								?>	
+							
+							</li>
+							
+							<li class="nav-item">
+								<?php
+									if(isset($_SESSION['userid']))
+										echo '<a class="nav-link btn btn-outline-warning" href="logout.php">Logout</a>';
+									else
+										echo '<a class="nav-link btn btn-outline-warning" href="http://localhost:5001/login">Login</a>'
+								?>
+							</li>
+							<li class="nav-item">
+								<?php
+									if(!isset($_SESSION['userid']))
+										echo '<a class="nav-link btn btn-warning" href="http://localhost:5001/register">Signup</a>';
+								?>
+							</li>
+						</ul>
+					</div>
+			</nav>
+		</header>
+	<div class="course__category mt-5 mb-5" >   
 		<div class="container">   
 		<?php 
         	if (isset($_POST['submit-search'])) {
@@ -96,3 +136,8 @@
             </div>
         </div>
     </div>
+
+	<?php include('footer.html')?>
+	</body>
+	</html>
+	
