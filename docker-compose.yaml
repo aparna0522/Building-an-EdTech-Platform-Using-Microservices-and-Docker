@@ -56,9 +56,9 @@ services:
       dockerfile: Dockerfile.payment
     ports:
       - "7000:7000"
-  # todo:
-  #   build:
-  #     context: ./TodoService
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "3000:3000"
+  todo:
+    build:
+      context: ./TodoService
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
