@@ -33,7 +33,10 @@ include('header.html');
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">	
                         <li class="nav-item">
-                            <a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Dashboard</a>
+                            <a class="nav-link" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-warning" href="course-edit-delete.php">Back to edit course</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-warning" href="logout.php">Logout</a>
@@ -42,7 +45,7 @@ include('header.html');
                 </div>	
         </nav>
     </header> 
-    <div class="container">
+    <div class="container" style="margin-top:50px;">
         <h1 class="text-center mt-4">Your Added Lectures and Skills</h1>
         <hr class="slide2">
         <?php
@@ -53,7 +56,12 @@ include('header.html');
             $query_run = mysqli_query($connect,$query);
         ?>
         <!-- ################ Lecture Table ########### -->
+         
          <table class="table table-hover my-3">
+            <?php
+                    if($query_run && mysqli_num_rows($query_run)>0)
+                    {
+            ?>
             <thead class="thead-dark">
                 <tr class="text-center">
                     <th scope="col"></th>
@@ -64,8 +72,6 @@ include('header.html');
             </thead>
             <tbody>
                 <?php
-                    if($query_run && mysqli_num_rows($query_run)>0)
-                    {
                         foreach($query_run as $row){
                 
                 ?>
@@ -93,7 +99,9 @@ include('header.html');
                     }
                     else
                     {
-                        echo "<h1 class='text-center m-5'>No Record Found</h1>";
+                        echo '<div class="text-center" style="margin-bottom:250px; margin-top:100px">
+                        <img src="https://thefitzip.com/public/frontend/imgs/norecordfound.png">
+                        </div>';
                     }  
             
                 ?>  
@@ -105,6 +113,11 @@ include('header.html');
             $query_skill_run = mysqli_query($connect,$query_skill);
         ?>
         <table class="table table-hover my-3">
+        <?php
+            if($query_skill_run && mysqli_num_rows($query_skill_run)>0)
+            {
+        
+        ?>
             <thead class="thead-dark">
                 <tr class="text-center">
                     <th scope="col">What will students learn in your course?</th>
@@ -114,8 +127,7 @@ include('header.html');
             </thead>
             <tbody>
                 <?php
-                    if($query_skill_run && mysqli_num_rows($query_skill_run)>0)
-                    {
+                    
                         foreach($query_skill_run as $row){
                 
                 ?>
@@ -140,7 +152,10 @@ include('header.html');
                     }
                     else
                     {
-                        echo "<h1 class='text-center m-5'>No Record Found</h1>";
+                        echo '<div class="text-center" style="margin-bottom:250px; margin-top:100px">
+                        <img src="https://thefitzip.com/public/frontend/imgs/norecordfound.png">
+                        </div>';
+                       
                     } 
             
                 ?>  

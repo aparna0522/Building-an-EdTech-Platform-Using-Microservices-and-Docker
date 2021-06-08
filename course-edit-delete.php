@@ -32,6 +32,15 @@ include('header.html');
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">	
                         <li class="nav-item">
+								<?php 
+								if(isset($_SESSION['userid']))
+									echo '<a class="nav-link" href="course.php"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+								else 
+									echo '<a class="nav-link" href="http://localhost:5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+								?>	
+							
+						</li>
+                        <li class="nav-item">
                             <a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Dashboard</a>
                         </li>
                         <li class="nav-item">
@@ -41,7 +50,7 @@ include('header.html');
                 </div>	
         </nav>
     </header>  
-    <div class="container">
+    <div class="container" style="margin-top:50px;">
         <h1 class="text-center mt-4">Your Added Courses</h1>
         <hr class="slide2">
         <?php
@@ -94,7 +103,9 @@ include('header.html');
                     }
                     else
                     {
-                        echo "<h1 class='text-center m-5'>No Record Found</h1>";
+                        echo '<div class="text-center" style="margin-bottom:250px; margin-top:100px">
+                        <img src="https://thefitzip.com/public/frontend/imgs/norecordfound.png">
+                        </div>';
                     }    
             
                 ?>  
