@@ -3,6 +3,7 @@
 	if(isset($_SESSION['userid'])){
 	include('header.html');
 ?>	
+
 	<body ng-app="myApp" ng-controller="myCtrl">	
 		<!-- Navbar -->
 		<div class="course-bg">
