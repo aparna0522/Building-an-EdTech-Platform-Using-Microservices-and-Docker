@@ -35,3 +35,10 @@ An educational website which can potentially bring changes to the current learni
 
 1. Helping peers to interact with each other and resolve their doubts. They can connect with other peers who are learning the same course. 
 2. Adding some extra features like creation of quizes for easy evaluation. 
+
+<h2>Important Features:</h2>
+
+1. Explain how that is a microservice. 
+2. Down Services and present. 
+3. Scaling of the services.
+4. Google's Language Change API.
