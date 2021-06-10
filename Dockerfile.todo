@@ -9,7 +9,7 @@ WORKDIR /code
 
 # Copy all the application's files into the /code
 # directory.
-COPY . /code
+COPY ./TodoService /code
 
 # Run bundle install to install the Ruby dependencies.
 RUN gem install rails bundler

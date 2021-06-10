@@ -18,8 +18,6 @@ services:
       dockerfile: Dockerfile.course
     ports:
       - "5000:80"
-    # links:
-    #   - login
     depends_on:
       - mysql
       - login
@@ -37,7 +35,7 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: eduhub_course
     cap_add:
-      - SYS_NICE # CAP_SYS_NICE
+      - SYS_NICE 
     ports:
       - "30003:1000"
   phpmyadmin:
