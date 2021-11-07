@@ -1,4 +1,4 @@
-# FYP - Educational Platform Using Microservices Architecture and Docker 
+# Building an EdTech platform 
 
 <h2>How to run this project?</h2>
 
