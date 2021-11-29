@@ -4,8 +4,9 @@
 
 1. Clone this repository.
 2. Ensure that you have the ".env" file in your codebase. Update the contents in the env file to include your razorpay KeyID and SECRET_KEY 
-3. Install Docker and start.
-4. Use the terminal and write the following command. 
+3. Enter Cloudinary URL for your project by editing js --> script.js --> <CLOUDINARY_URL>
+4. Install Docker and start.
+5. Use the terminal and write the following command. 
 ```
 docker-compose up --build --remove-orphans
 ```
