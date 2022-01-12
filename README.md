@@ -1,4 +1,4 @@
-# Building an EdTech platform 
+# Building an EdTech platform Using Microservices and Docker
 
 <h2>How to run this project?</h2>
 
