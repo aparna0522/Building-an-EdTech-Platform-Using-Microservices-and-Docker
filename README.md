@@ -12,6 +12,11 @@ docker-compose up --build --remove-orphans
 ```
 5. Navigate to http://localhost:5000 to find the website up and running. 
 
+<h2>Videos</h2>
+Detailed Video and explanation: https://drive.google.com/file/d/1fMqWXOrLnv5U1kSAGilcfcrNLJFw6gn8/view?usp=sharing 
+
+Short Video: https://drive.google.com/file/d/1EyQW0__Sejbi9oNpoaK35RzRsOZPD8WG/view?usp=sharing
+
 <h2>Project Description</h2>
 <b>Creators:</b> Trio of enthusiastic and motivated students who want to innovate and create something essential and useful for the student community!! :)
 
