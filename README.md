@@ -17,6 +17,13 @@ Detailed Video and explanation: https://drive.google.com/file/d/1fMqWXOrLnv5U1kS
 
 Short Video: https://drive.google.com/file/d/1EyQW0__Sejbi9oNpoaK35RzRsOZPD8WG/view?usp=sharing
 
+<h2>Technical Paper</h2>
+Paper presented at IEEE Pune Conference by @aparna0522 (Aparna Naik) in December 2021.
+
+Paper published in IEEE Xplore on 31st January, 2022. 
+
+Paper link: https://ieeexplore.ieee.org/document/9686535
+
 <h2>Project Description</h2>
 <b>Creators:</b> Trio of enthusiastic and motivated students who want to innovate and create something essential and useful for the student community!! :)
 
