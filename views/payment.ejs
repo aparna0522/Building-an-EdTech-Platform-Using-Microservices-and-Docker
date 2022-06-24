@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/payment.css ">
 </head>
 <script>
-  var url = new URL("http://localhost:5000/course-service/course_details.php"),
+  var url = new URL(`${window.location.host}`+"/course-service/course_details.php"),
     params = {course_id:"<%= id %>"}
   Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
 
@@ -46,7 +46,7 @@
               
             <br>
             <script>
-              var courseurl = new URL("http://localhost:5000/course-service/course_details.php"),
+              var courseurl = new URL(`${window.location.host}` + "/course-service/course_details.php"),
               params = {course_id:"<%= id %>"}
               Object.keys(params).forEach(key => courseurl.searchParams.append(key, params[key]))
 
@@ -92,7 +92,7 @@
             <div id="paymentDetails"></div>
             <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
             <script>
-              var courseurl = new URL("http://localhost:5000/course-service/course_details.php"),
+              var courseurl = new URL(`${window.location.host}` + "/course-service/course_details.php"),
               params = {course_id:"<%= id %>"}
               Object.keys(params).forEach(key => courseurl.searchParams.append(key, params[key]))
 
@@ -133,7 +133,7 @@
         <label for="">Order id :</label>
         <input type="text" id="order-id"><br>
         <br>
-        <label for="">Payment id :</label>
+        <label for="">Payment id :</label>lo
         <input type="text" id="order-pay-id"><br>
         <br>
         <label for="">Order signature :</label>
@@ -157,7 +157,7 @@
                     const successText=JSON.parse(xmlHttp.responseText);
                     const username="Abc";
                     if(successText.status==="success"){
-                      fetch('http://localhost:5000/course-service/enrollment.php', {
+                      fetch(`${window.location.host}`+'/course-service/enrollment.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -169,7 +169,7 @@
                         })
                       }).then((res) => res.json())
                       .then((data)=>{
-                        const URL = "http://localhost:5000/dashboard.php?id=<%=userid %>";
+                        const URL = `${window.location.host}`+"/dashboard.php?id=<%=userid %>";
                         window.location= URL;
                       });
 
