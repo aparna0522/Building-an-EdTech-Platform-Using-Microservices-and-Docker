@@ -1,5 +1,5 @@
 // Image functionality
-var CLOUDINARY_URL = '<ENTER URL>';
+var CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/eduhub/image/upload';
 var CLOUDINARY_PRESET = 'eduhub';
 const imgFile = document.getElementById("imgFile");
 const previewContainer = document.getElementById("imagePreview");
