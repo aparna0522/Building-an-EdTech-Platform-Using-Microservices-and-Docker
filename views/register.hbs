@@ -128,7 +128,7 @@
                                 if (result.status === 'ok') {
                                     // everything went fine
                                     alert('Success')
-                                    window.location='http://localhost:5001/login';
+                                    window.location='http://'+window.location.hostname.toString()+':5001/login';
                                 } else {
                                     alert(result.error)
                                 }

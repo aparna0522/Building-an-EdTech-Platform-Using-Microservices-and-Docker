@@ -74,7 +74,7 @@
                                 if (result.status === 'ok') {
                                     // everything went fine
                                     alert('Success');
-                                    const URL = "http://localhost:5000/dashboard.php?id=" + result.id;
+                                    const URL = "http://"+window.location.hostname.toString()+":5000/dashboard.php?id=" + result.id;
                                     window.location= URL;
                                 } else {
                                     alert(result.error)

@@ -2,6 +2,7 @@
 session_start();
 if(isset($_SESSION['userid'])){
 include('header.html');
+include('Serverhost.php');
 ?>
 <body>
     <header>
@@ -36,7 +37,7 @@ include('header.html');
 								if(isset($_SESSION['userid']))
 									echo '<a class="nav-link" href="course.php"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
 								else 
-									echo '<a class="nav-link" href="http://localhost:5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+									echo '<a class="nav-link" href="http://'.$url.':5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
 								?>	
 							
 						</li>
@@ -249,7 +250,7 @@ include('header.html');
 <?php
 }
 else{
-    header("Location:http://localhost:5001/login");
+    header("Location:http://'.$url.':5001/login");
 }
 
 ?>

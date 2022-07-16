@@ -2,6 +2,7 @@
 	session_start();
 	if(isset($_SESSION['userid'])){
 	include('header.html');
+	include('Serverhost.php');
 ?>	
 
 	<body ng-app="myApp" ng-controller="myCtrl">	
@@ -417,7 +418,7 @@
 <?php
 }
 else{
-    header("Location:http://localhost:5001/login");
+    header("Location:http://'.$url.':5001/login");
 }
 
 ?>

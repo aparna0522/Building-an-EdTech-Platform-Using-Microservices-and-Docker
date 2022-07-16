@@ -3,6 +3,7 @@
 	include('header.html');
 	$con = mysqli_connect('mysql','root','root');
 	mysqli_select_db($con,'eduhub_course');
+	include('Serverhost.php');
 	
 ?>
 <body >
@@ -70,7 +71,7 @@
 								if(isset($_SESSION['userid']))
 									echo '<a class="nav-link" href="course.php"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
 								else 
-									echo '<a class="nav-link" href=`{window.location.hostname}`+":5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+									echo '<a class="nav-link" href="http://'.$url.':5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
 								?>	
 							
 							</li>
@@ -80,13 +81,13 @@
 									if(isset($_SESSION['userid']))
 										echo '<a class="nav-link btn btn-outline-warning" href="logout.php">Logout</a>';
 									else
-										echo '<a class="nav-link btn btn-outline-warning" href="http://localhost:5001/login">Login</a>'
+										echo '<a class="nav-link btn btn-outline-warning" href="http://'.$url.':5001/login">Login</a>'
 								?>
 							</li>
 							<li class="nav-item">
 								<?php
 									if(!isset($_SESSION['userid']))
-										echo '<a class="nav-link btn btn-warning" href="http://localhost:5001/register">Signup</a>';
+										echo '<a class="nav-link btn btn-warning" href="http://'.$url.':5001/register">Signup</a>';
 								?>
 							</li>
 						</ul>

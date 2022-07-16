@@ -1,6 +1,7 @@
 <?php
 	session_start();
     include('header.html');
+    include('Serverhost.php');
 	if($_GET['category']=='IT-Software'){		
 		$category=$_GET['category'];
 		$category=str_replace("-","&",$category);
@@ -82,13 +83,13 @@
 								if(isset($_SESSION['userid']))
 									echo '<a class="nav-link btn btn-outline-warning" href="logout.php">Logout</a>';
 								else
-									echo '<a class="nav-link btn btn-outline-warning" href="http://localhost:5001/login">Login</a>'
+									echo '<a class="nav-link btn btn-outline-warning" href="http://'.$url.':5001/login">Login</a>'
 								?>
 							</li>
 							<li class="nav-item">
 								<?php
 									if(!isset($_SESSION['userid']))
-										echo '<a class="nav-link btn btn-warning" href="http://localhost:5001/register">Signup</a>';
+										echo '<a class="nav-link btn btn-warning" href="http://'.$url.':5001/register">Signup</a>';
 								?>
 							</li>	
 						</ul>

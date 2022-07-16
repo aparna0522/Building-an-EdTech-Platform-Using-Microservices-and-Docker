@@ -4,6 +4,7 @@
     $userid =  strval($_SESSION['userid']);
     $course_id=$_GET['id'];
     include('header.html');
+    
 ?>  
 
 <style>
@@ -57,9 +58,9 @@
                         <li class="nav-item">
                             <a class="nav-link btn btn-warning" href="dashboard.php?id=<?php echo $_SESSION['userid'];?>">Dashboard</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link btn btn-outline-warning" href=<?php echo "#"?>>My Todo List</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>	
         </nav>

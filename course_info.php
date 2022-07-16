@@ -1,6 +1,7 @@
 <?php
     session_start();
     include('header.html');
+    include('Serverhost.php');
     $course_id= $_GET['id'];
     $connect = mysqli_connect('mysql','root','root');
 	mysqli_select_db($connect,'eduhub_course');
@@ -45,12 +46,12 @@
                             if(isset($_SESSION['userid']))
                             {   
                                 if($uid!=$_SESSION['userid'])
-                                    echo '<a href="http://localhost:7000/payment/{{x.course_id}}/'.$_SESSION['userid'].'" class="btn btn-light text-dark">Enroll</a>';
+                                    echo '<a href="http://'.$url.':7000/payment/{{x.course_id}}/'.$_SESSION['userid'].'" class="btn btn-light text-dark">Enroll</a>';
                                 else
                                     echo '<a href="viewcourse.php?id={{x.course_id}}" class="btn btn-light text-dark">Go to course</a>';
                             }    
                             else 
-                                echo '<a href="http://localhost:5001/login" class="btn btn-light text-dark">Enroll</a>';
+                                echo '<a href="http://'.$url.':5001/login" class="btn btn-light text-dark">Enroll</a>';
                             ?>
                             <span class="ml-2 lead" ng-cloak>{{x.amount| currency:"&#8377;"}}</span>                            
                             <p class="mt-1" ng-cloak>{{x.course_language}}</p>

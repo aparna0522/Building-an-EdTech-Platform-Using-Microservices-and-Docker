@@ -3,6 +3,8 @@ session_start();
 $id=$_GET['id'];
 if($_SESSION['userid']){
 include('header.html');
+include('Serverhost.php');
+
 ?>
 <body>
     <header>
@@ -325,7 +327,7 @@ include('header.html');
 <?php
 }
 else{
-    header("Location:"+"http://localhost:5001/login");
+    header("Location:"+"http://'.$url.':5001/login");
 }
 
 ?>

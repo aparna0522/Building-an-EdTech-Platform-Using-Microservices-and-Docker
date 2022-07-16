@@ -1,8 +1,11 @@
 <?php 
 	session_start();
 	include('header.html');
-
-	    
+	function getRealHost(){
+		list($realHost,)=explode(':',$_SERVER['HTTP_HOST']);
+		return $realHost;
+	 } 
+	 $url= getRealHost();
 ?>
 	<body ng-app="home" ng-controller="homeCtrl">
 		  
@@ -71,7 +74,7 @@
 								if(isset($_SESSION['userid']))
 									echo '<a class="nav-link" href="course.php"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
 								else 
-									echo '<a class="nav-link" href="http://localhost:5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
+									echo '<a class="nav-link" href="http://'.$url.':5001/login"><i class="fas fa-1x fa-user-tie"></i>For Teachers </a>';
 								?>	
 							
 							</li>
@@ -82,14 +85,14 @@
 										echo '<a class="nav-link btn btn-outline-warning" href="logout.php">Logout</a>';
 									else{
 
-										echo '<a class="nav-link btn btn-outline-warning" href="'.$_SERVER['HOST_NAME'].':5001/login">Login</a>';
+										echo '<a class="nav-link btn btn-outline-warning" href="http://'.$url.':5001/login">Login</a>';
 									}
 								?>
 							</li>
 							<li class="nav-item">
 								<?php
 									if(!isset($_SESSION['userid']))
-										echo '<a class="nav-link btn btn-warning" href="http://localhost:5001/register">Signup</a>';
+										echo '<a class="nav-link btn btn-warning" href="http://'.$url.':5001/register">Signup</a>';
 								?>
 							</li>
 						</ul>
@@ -227,7 +230,7 @@
 												if(isset($_SESSION['userid']))
 													echo '<a href="course.php" class="btn btn-warning py-2 font-weight-bold" style="text-shadow:none;">Know More</a>';
 												else 
-												echo '<a href="http://localhost:5001/login" class="btn btn-warning py-2 font-weight-bold" style="text-shadow:none;">Know More</a>';
+												echo '<a href="http://'.$url.':5001/login" class="btn btn-warning py-2 font-weight-bold" style="text-shadow:none;">Know More</a>';
 											?>	
 										</div>	
 									</div>
