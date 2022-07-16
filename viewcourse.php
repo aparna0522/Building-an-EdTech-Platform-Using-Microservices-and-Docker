@@ -349,7 +349,7 @@
 <?php
 }
 else{
-    header("Location:http://localhost:5001/login");
+    header("Location:"+`${window.location.hostname}`+":5001/login");
 }
 
 ?>
