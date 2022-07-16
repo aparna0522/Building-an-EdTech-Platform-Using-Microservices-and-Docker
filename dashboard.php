@@ -121,6 +121,9 @@
               <br>';
             }
           }
+          // else{
+          //   echo "Start Learning! Enroll yourself in the courses.";
+          // }
         ?>
       </div>
     </div> 

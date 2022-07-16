@@ -17,7 +17,7 @@ services:
       context: .
       dockerfile: Dockerfile.course
     ports:
-      - "4998-5000:80"
+      - "5000:80"
     depends_on:
       - mysql
       - login
@@ -54,9 +54,9 @@ services:
       dockerfile: Dockerfile.payment
     ports:
       - "7000:7000"
-  todo:
-    build:
-      context: .
-      dockerfile: Dockerfile.todo
-    ports:
-      - "3000:3000"
+  # todo:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.todo
+  #   ports:
+  #     - "3000:3000"
