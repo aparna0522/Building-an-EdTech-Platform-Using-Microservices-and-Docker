@@ -1,7 +1,6 @@
 # Building an EdTech platform Using Microservices and Docker
 
 <h2>Project Description</h2>
-<b>Creators:</b> Trio of enthusiastic and motivated students who want to innovate and create something essential and useful for the student community!! :)
 
 An educational website which can potentially bring changes to the current learning lifestyle of the students, with simpler and cost-effective teaching. This project is unlike traditional applications which use monolithic architecture. The distinctiveness of this application lies in the usage of microservices architecture. We have implemented three microservices namely:
 
