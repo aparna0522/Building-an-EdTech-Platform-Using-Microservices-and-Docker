@@ -2,7 +2,7 @@
 
 <h2>Project Description</h2>
 
-We have implemented three microservices namely:
+Project consists of three microservices namely:
 
 1. User Microservice
 2. Course Microservice
