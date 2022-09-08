@@ -2,7 +2,7 @@
 
 <h2>Project Description</h2>
 
-An educational website which can potentially bring changes to the current learning lifestyle of the students, with simpler and cost-effective teaching. This project is unlike traditional applications which use monolithic architecture. The distinctiveness of this application lies in the usage of microservices architecture. We have implemented three microservices namely:
+We have implemented three microservices namely:
 
 1. User Microservice
 2. Course Microservice
