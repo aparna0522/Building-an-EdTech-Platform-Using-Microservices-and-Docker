@@ -72,8 +72,11 @@ Paper link: https://ieeexplore.ieee.org/document/9686535
 
 <h3>Future Work</h3>
 
-1. Helping peers to interact with each other and resolve their doubts. They can connect with other peers who are learning the same course. 
-2. Adding some extra features like creation of quizes for easy evaluation. 
+1. Let peers connect one-on-one, network, learn and grow together, by integrating a chat service (allowing only registered users to see other users, and hiding identity details, unless the user wants otherwise).
+2. Ability for the instructors to create quizes for easy evaluation.
+3. Can add some analytics monitoring system for the course uploader.
+4. Recommendation Service.
+5. New Course Notification Service.
 
 <h2>Important Features of the application:</h2>
 
